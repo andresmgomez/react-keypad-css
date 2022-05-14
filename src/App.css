@@ -1,0 +1,75 @@
+/**************************/
+
+/* Uses pseudoclasses that tells each browser,
+no margin, and no padding, and put every html
+element in a box */
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Most important html element on a page. It wraps 
+our whole react app. Since we are bulding a small
+component aka (section). We can style it here */
+body {
+   width: 300px;
+   /* this puts everything in the center */
+   margin: 0 auto;
+   font-family: Arial, Helvetica, sans-serif;
+   /* how far is each letter from each other */
+   letter-spacing: 5px;
+   font-size: 28px;
+}
+
+.wrapper {
+  padding-top: 100px;
+}
+
+/* This uses a child (>) selector to jump
+to .font-top class  */
+section > .font-top {
+   border: 1px solid #ddd;
+   height: 60px;
+   max-width: 250px;
+   padding-top: 9px;
+   text-align: right;
+   margin-bottom: 6px;
+   font-size: 2.5rem;
+   /* allow us to hide our numbers, when it
+   expands beyond of what our font-top screen
+   can hold */
+   overflow-x: auto;
+}
+
+button {
+  width: 80px;
+  border: 1px solid #faf6f6;
+  border-radius: 1px;
+  text-align: center;
+}
+
+.line > button {
+  /* allows block element such as (divs or buttons)
+  to be placed inline (next to each other). 
+  NOTE: ONLY WORKS WITH BLOCK ELEMENTS */
+   display: inline-block;
+   padding: 20px;
+   margin: 10px 4px 10px 0;
+   cursor: pointer;
+   background-color: #ddd;
+   /* allows to set how fast or slow a button is shown */
+   transition: all 0.3s ease-out;
+}
+
+/* pseudo class that sets what color to show when a user
+is hovering (moving a mouse toward the button) before 
+making a click on it */
+button:hover {
+   background-color: #389899;
+   color: #faf6f6;
+   /* allows to put a 2d shadow behind the button */
+   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
